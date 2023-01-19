@@ -64,7 +64,9 @@ public class DiscountsTest extends Parent{
 
         DiscountsClass disClass = new DiscountsClass(discountsDescription,discountsCode,discountsPriority);
         disClass.setId(discountsId);
-        disClass.setActive(discountsActive);
+        disClass.setActive(true);
+        //          or
+        //disClass.setActive(discountsActive);
 
         given()
                 .cookies(cookies)
@@ -136,8 +138,10 @@ public class DiscountsTest extends Parent{
         ;
     }
 
-    public String getRandomCode() {return RandomStringUtils.randomAlphanumeric(3).toLowerCase();}
-    public int getRandomInt(){ return (int) (Math.random() * 10)+1;}
+    public String getRandomCode()
+    {return RandomStringUtils.randomAlphanumeric(3).toLowerCase();}
+    public int getRandomInt()
+    { return (int) (Math.random() * 10)+1;}
 
 
 }

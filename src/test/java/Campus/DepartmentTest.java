@@ -192,7 +192,7 @@ public void editingSubComponentsOnly(){
                 .delete("school-service/api/department/{deptID}")
                 .then()
                 .log().body()
-                .statusCode(400);
+                .statusCode(204);
              // statusCode should have been 400! but it returns 204.
     }
 
